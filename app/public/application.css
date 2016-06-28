@@ -1,0 +1,95 @@
+
+html {
+  font-family: 'Lato', sans-serif;
+  color: #00585E;
+}
+
+body {
+  color: #00585E;
+}
+
+
+/**** DASHBOARD ****/
+
+.dashboard-title {
+  text-align: center;
+  color: #00585E;
+}
+
+.dashboard-list-item {
+  margin-left: 10px;
+}
+
+.dashboard-list {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 18px;
+  list-style: none;
+}
+
+.dashboard-list li {
+  color: #F5F2DC;
+  margin-bottom: 10px;
+}
+.dashboard-list a {
+  color: #F5F2DC;
+}
+
+.jumbotron {
+  background-color: #00585E;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.glyphicon {
+  color: #F5F2DC;
+}
+
+
+
+/**** INDEX ****/
+
+.task-index {
+  font-size: 18px;
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: solid .5px #00585E;
+}
+.list-group-item a {
+  color: #454445;
+}
+
+/**** NEW ****/
+
+form {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #00585E;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #009494;
+  color: #F5F2DC;
+}
+
+
+/**** SHOW ****/
+
+.navbar-default {
+  background-color: #fff;
+  border: none;
+  margin-top: 10px;
+}
+
+.glyphicon-menu-left {
+  color: #CC6027;
+}
+
+.back, .back:hover {
+  color: #CC6027;
+}
