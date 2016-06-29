@@ -5,19 +5,24 @@ require File.expand_path('../../config/environment', __FILE__)
 
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'capybara/dsl'
+require 'launchy'
 
 module TestHelpers
-
   def teardown
     task_manager.delete_all
-    #will allow us to run the teardown method from the class we're inheri Minitest. So Minitest has a teardown method
     super
   end
 
   def task_manager
-    database = YAML::Store.new('db/task_manager_test.rb')
+    database = YAML::Store.new('db/task_manager_test')
     @database ||= TaskManager.new(database)
   end
+end
 
+Capybara.app = TaskManagerApp
 
+class FeatureTest < Minitest::Test
+  include Capybara::DSL
+  include TestHelpers
 end
