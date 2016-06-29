@@ -4,8 +4,13 @@
 
 <div class="col-md-4">
   <ul class="list-group">
-<% @tasks.each do |task| %>
-  <h3 class="task-index list-group-item"><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-<% end %>
-</ul>
+  <% @tasks.each do |task| %>
+    <h3 class="task-index list-group-item"><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
+    <a href="/tasks/<%= task.id %>/edit">Edit Task</a>
+    <form action="/tasks/<%= task.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete Task" />
+    </form>
+  <% end %>
+  </ul>
 </div>
